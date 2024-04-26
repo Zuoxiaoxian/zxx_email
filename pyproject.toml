@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "send_email_zxx"
+authors = [
+  { name="Zuoxiaoxian", email="1980179070@qq.com" },
+]
+description = "简单的连接邮箱, 生成邮件并发送"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://readthedocs.org"
+Homepage = "https://github.com/Zuoxiaoxian/zxx_email"
+Issues = "https://github.com/Zuoxiaoxian/zxx_email/issues"
