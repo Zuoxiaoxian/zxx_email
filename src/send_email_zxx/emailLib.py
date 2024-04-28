@@ -141,5 +141,3 @@ class SendEmailAlert(SendEmailBuilder, SingleT):
         if self.email_to is not None:
             self.smtp.send_message(self.email)
             print(f"=> send Email Alert success")
-
-
