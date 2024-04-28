@@ -73,24 +73,28 @@ class SendEmailBuilder(metaclass=ABCMeta):
     def generate_header(self):
         """生成邮件头"""
         # pylint: disable=pointless-statement
+        # pylint: disable=unnecessary-pass
         pass
 
     @abstractmethod
     def gererate_body(self):
         """生成邮件体"""
         # pylint: disable=pointless-statement
+        # pylint: disable=unnecessary-pass
         pass
 
     @abstractmethod
     def add_attachment(self):
         """添加邮件附件"""
         # pylint: disable=pointless-statement
+        # pylint: disable=unnecessary-pass
         pass
 
     @abstractmethod
     def send_email(self):
         """ 发送邮件"""
         # pylint: disable=pointless-statement
+        # pylint: disable=unnecessary-pass
         pass
 
 
