@@ -4,6 +4,8 @@
 
 
 ```python
+from send_email_zxx.emailLib import MailBox, SendEmailAlert, email_director
+
 config = {
     "mail_port": 587,
     "mail_host": "smtp.qq.com",
@@ -11,12 +13,12 @@ config = {
     "mail_pass": "", # 授权码
 }
 message = {
-    "Subject": "Test ...",                 # 主题
-    "Body": "<h1>test send email</h1>",    # 正文
-    "To": "xxxxx@qq.com,xxxxx@qq.com",     # 接收人
-    "Cc": "xxxxx@qq.com,xxxxx@qq.com",     # 抄送人
-    "From": "xxxxx@qq.com",                # 发送人
-    "Attachment": [                        # 附件
+    "Subject": "Test ...",                 # 主题   必填
+    "Body": "<h1>test send email</h1>",    # 正文   必填
+    "To": "xxxxx@qq.com,xxxxx@qq.com",     # 接收人 必填
+    "Cc": "xxxxx@qq.com,xxxxx@qq.com",     # 抄送人 可选
+    "From": "xxxxx@qq.com",                # 发送人 必填
+    "Attachment": [                        # 附件 可选
         {
             "path": "文件完整路径",
             "filename": "文件名称",
