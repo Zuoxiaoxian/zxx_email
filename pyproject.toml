@@ -18,6 +18,5 @@ classifiers = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://readthedocs.org"
 Homepage = "https://github.com/Zuoxiaoxian/zxx_email"
 Issues = "https://github.com/Zuoxiaoxian/zxx_email/issues"
