@@ -9,7 +9,7 @@
 '''
 
 from abc import ABCMeta, abstractmethod
-import ssl, smtplib, email
+import ssl, smtplib
 from email.message import EmailMessage
 
 class SingleT:
