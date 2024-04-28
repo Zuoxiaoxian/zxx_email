@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name
 # -*- encoding: utf-8 -*-
 '''
 @File        :   emailLib.py
@@ -12,8 +13,10 @@ import ssl
 import smtplib
 from email.message import EmailMessage
 
+# pylint: disable=too-few-public-methods
 class SingleT:
     """单例模式"""
+    # pylint: disable=unused-argument
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, '_instance'):
             cls._instance = super().__new__(cls)
@@ -40,6 +43,8 @@ class MailBox(SingleT):
         print("=> login success")
 
     def logout(self):
+        """退出邮箱登录
+        """
         self.smtp.quit()
         print("=> logout success")
 
@@ -48,6 +53,7 @@ class SendEmailBuilder(metaclass=ABCMeta):
     """生成邮件 抽象接口
     """
     def __init__(self, **kwargs):
+        # pylint: disable=invalid-name
         From = kwargs.get("From", None)
         To = kwargs.get("To", None)
         Subject = kwargs.get("Subject", None)
@@ -66,21 +72,25 @@ class SendEmailBuilder(metaclass=ABCMeta):
     @abstractmethod
     def generate_header(self):
         """生成邮件头"""
+        # pylint: disable=pointless-statement
         ...
 
     @abstractmethod
     def gererate_body(self):
         """生成邮件体"""
+        # pylint: disable=pointless-statement
         ...
 
     @abstractmethod
     def add_attachment(self):
         """添加邮件附件"""
+        # pylint: disable=pointless-statement
         ...
 
     @abstractmethod
     def send_email(self):
         """ 发送邮件"""
+        # pylint: disable=pointless-statement
         ...
 
 
@@ -140,6 +150,4 @@ class SendEmailAlert(SendEmailBuilder, SingleT):
         """ 发送邮件"""
         if self.email_to is not None:
             self.smtp.send_message(self.email)
-            print(f"=> send Email Alert success")
-
-
+            print("=> send Email Alert success")
